@@ -5,23 +5,18 @@ const Apirequest = () => {
   const [pokemonName, setPokemonName] = useState("");
   const [post, setPost] = useState({
     name: "",
-    // number: "",
+    number: "",
     image: "",
   });
 
   useEffect(() => {
     const getPosts = async () => {
       const res = await fetch(
-        `https://pokeapi.co/api/v2/pokemon/ditto`
+        `https://pokeapi.co/api/v2/pokemon/${pokemonName}`
       );
       const data = await res.json();
       console.log(data);
-      // setPost(data)
-      setPost({
-        name: pokemonName,
-        // number: res.data.id,
-        image: res.data.sprites.front_default,
-      });
+      setPost(data)
     };
     getPosts();
   }, []);
@@ -43,7 +38,15 @@ const Apirequest = () => {
         >
           Search Pokemon
         </button>
-        <p>{JSON.stringify(post.name)}</p>
+       
+        {post.map((item) => {
+          return (
+            <div key={item.id}>
+              <h3>{item.name}</h3>
+              <img src={item.sprites.front_shiny} alt=""/>
+            </div>
+          )
+        })}
       </div>
     </div>
   );
