@@ -16,14 +16,14 @@ body {
       display: flex;
       flex-direction: column;
       align-items: center;
-      color: #e7e7e6;
+      color:  #FECA1B;
     }
   
     &__input {
       width: 200px;
       height: 40px;
       border-radius: 10px;
-      border: 1px solid #5e98b1;
+      border: 1px solid #FECA1B;
       font-size: 18px;
       padding-left: 10px;
     }
@@ -36,11 +36,16 @@ body {
       font-size: 18px;
       padding-left: 10px;
       border: none;
-      color: #e7e7e6;
-      background-color: #006cbf;
+      color: black;
+      background-color: #FECA1B;
     }
   
     &__btn:hover {
         cursor: pointer;
       }
+
+    // &__section {
+    //   background-color: white;
+
+    // }
   }
