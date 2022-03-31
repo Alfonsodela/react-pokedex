@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.scss";
 import Navigator from "./components/Navigator/Navigator";
 import PokedexList from "./pages/Pokedex-list/Pokedex-list";
+import SinglePokemon from "./pages/SinglePokemon/SinglePokemon";
 import Pokedex from "./pages/Pokedex/Pokedex";
 import Home from "./pages/Home/Home";
 import Contact from "./pages/Contact/Contact";
@@ -18,6 +19,7 @@ const App = () => {
         <Route path="/pokedex-list" element={<PokedexList/>}/>
         <Route path="/pokedex" element={<Pokedex/>}/>
         <Route path="/contact" element={<Contact/>}/>
+        <Route path="/single-pokemon/:pokeId" element={<SinglePokemon/>}/>
       </Routes>
     </Router>
   );

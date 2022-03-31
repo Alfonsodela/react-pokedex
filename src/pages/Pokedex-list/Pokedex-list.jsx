@@ -11,15 +11,17 @@ const PokedexList = () => {
       const url = `https://pokeapi.co/api/v2/pokemon/${i}`;
       const res = await fetch(url);
       const data = await res.json();
-      console.log(data);
+    
       pokeArray.push(data)
-      setPost(pokeArray
+     
         // name: data.name,
         // id: data.id,
         // image: data.sprites.front_shiny,
         // base_experience: data.base_experience,
-      );
+      ;
     }
+    // console.log();
+    setPost(pokeArray)
   };
 
   return (
