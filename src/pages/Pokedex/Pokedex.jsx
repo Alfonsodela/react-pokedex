@@ -49,9 +49,10 @@ const Pokedex = () => {
           Search Pokemon
         </button>
 
-        <div className="pokedex__section">
-          <p>{id}: {pokemonName}</p>
-          <img src={image} alt={name}/>
+        <div className="pokedex__item">
+          <p pokedex__subtitle>{id}<p/>
+          <p pokedex__name></p> {pokemonName}</p>
+          <img src={image} alt={name} pokedex__image/>
           <p>{base_experience}</p>
           
         </div>
