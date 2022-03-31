@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Post = (id, name, image) => {
+const Post = ({id, name, image}) => {
     return (
-        <ul className="pokedex__ul">
+        
       
         
           <li className="pokedex__item">
@@ -12,7 +12,7 @@ const Post = (id, name, image) => {
             <img src={image} alt={name} className="pokedex__image" />
           </li>
           
-        </ul>
+    
     );
 }
 
