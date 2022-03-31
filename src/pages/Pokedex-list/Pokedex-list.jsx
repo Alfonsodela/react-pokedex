@@ -10,12 +10,12 @@ const PokedexList = () => {
       const res = await fetch(url);
       const data = await res.json();
       console.log(data);
-      setPost({
+      setPost([{
         name: data.name,
         id: data.id,
         image: data.sprites.front_shiny,
         base_experience: data.base_experience,
-      });
+      }]);
     }
   };
 
@@ -25,9 +25,9 @@ const PokedexList = () => {
         <h1>Pokedex List</h1>
 
         <button className="pokedex__btn" onClick={getPost}>
-          Search Pokemon
+          Pokemon List
         </button>
-
+        
         {post.map((item) => {
           return (
             <Post 
