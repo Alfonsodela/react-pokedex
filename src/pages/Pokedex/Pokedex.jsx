@@ -28,7 +28,7 @@ const Pokedex = () => {
       name: pokemonName,
       id: data.id,
       image: data.sprites.front_shiny,
-      base_experience: data.base_experience
+      base_experience: data.base_experience,
     });
   };
 
@@ -38,6 +38,9 @@ const Pokedex = () => {
     <div className="pokedex">
       <div className="pokedex__title">
         <h1>Pokedex</h1>
+      </div>
+
+      <div className="pokedex__filter">
         <input
           type="text"
           className="pokedex__input"
@@ -48,14 +51,16 @@ const Pokedex = () => {
         <button className="pokedex__btn" onClick={getPosts}>
           Search Pokemon
         </button>
+      </div>
 
-        <div className="pokedex__item">
-          <p pokedex__subtitle>{id}<p/>
-          <p pokedex__name></p> {pokemonName}</p>
-          <img src={image} alt={name} pokedex__image/>
-          <p>{base_experience}</p>
-          
-        </div>
+      <div className="pokedex__item">
+        <p pokedex__subtitle>
+          {id}
+          <p />
+          <p pokedex__name></p> {pokemonName}
+        </p>
+        <img src={image} alt={name} pokedex__image />
+        <p>{base_experience}</p>
       </div>
     </div>
   );
