@@ -59,7 +59,7 @@ const Pokedex = () => {
           <p />
           <p pokedex__name></p> {pokemonName}
         </p>
-        <img src={image} alt={name} pokedex__image />
+        <img src={image} alt={name} className="pokedex__image" />
         <p>{base_experience}</p>
       </div>
     </div>

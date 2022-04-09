@@ -13,7 +13,15 @@ export default function SinglePokemon() {
   useEffect(() => {
     fetch("https://pokeapi.co/api/v2/pokemon/" + postId)
       .then((response) => response.json())
-      .then((response) => setInfo(response));
+      .then((response) => {
+        console.log(response);
+        setInfo({
+          name: response.name,
+          id: response.id,
+          img: response.sprites.front_shiny,
+         
+        });
+      });
   }, [postId]);
 
   const { id, name, img } = info;
