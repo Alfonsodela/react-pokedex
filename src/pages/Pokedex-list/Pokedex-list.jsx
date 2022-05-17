@@ -13,14 +13,7 @@ const PokedexList = () => {
       const data = await res.json();
     
       pokeArray.push(data)
-     
-        // name: data.name,
-        // id: data.id,
-        // image: data.sprites.front_shiny,
-        // base_experience: data.base_experience,
-      ;
     }
-    // console.log();
     setPost(pokeArray)
   };
 

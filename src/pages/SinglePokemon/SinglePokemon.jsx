@@ -19,7 +19,6 @@ export default function SinglePokemon() {
           name: response.name,
           id: response.id,
           img: response.sprites.front_shiny,
-         
         });
       });
   }, [postId]);
